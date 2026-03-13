@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ===== PWA Meta Tags ===== -->
+  <meta name="theme-color" content="#b07a55" />
+  <meta name="description" content="แอพรวมสูตรอาหาร ค้นหาเมนูจากวัตถุดิบที่มี" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ทำอะไรกินดี" />
+
+  <!-- ===== PWA Icons ===== -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <title>ทำอะไรกินดี - เพิ่มวัตถุดิบ</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="supabase-config.js"></script>
+  <script defer src="script.js"></script>
+  <!-- ===== Register Service Worker ===== -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(reg => console.log('✅ SW registered:', reg.scope))
+          .catch(err => console.warn('SW registration failed:', err));
+      });
+    }
+  </script>
+</head>
+<body>
+  <noscript>กรุณาเปิดใช้งาน JavaScript เพื่อใช้งานเว็บไซต์นี้</noscript>
+
+</body>
+</html>
