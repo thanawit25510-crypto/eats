@@ -11,33 +11,24 @@
   "icons": [
     {
       "src": "logo.png",
-      "sizes": "192x192",
+      "sizes": "608x554",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ],
-  "screenshots": [],
   "categories": ["food", "lifestyle"],
   "shortcuts": [
     {
       "name": "เพิ่มเมนูใหม่",
       "short_name": "เพิ่มเมนู",
       "description": "เพิ่มสูตรอาหารใหม่",
-      "url": "./add-recipe.html",
-      "icons": [{ "src": "logo.png", "sizes": "96x96" }]
+      "url": "./add-recipe.html"
     },
     {
       "name": "หมวดหมู่",
       "short_name": "หมวดหมู่",
       "description": "ดูเมนูตามหมวดหมู่",
-      "url": "./category.html",
-      "icons": [{ "src": "logo.png", "sizes": "96x96" }]
+      "url": "./category.html"
     }
   ]
 }
